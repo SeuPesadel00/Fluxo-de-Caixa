@@ -1,0 +1,11 @@
+# Configuração de Build (Opcional, mas boa prática)
+[build]
+  command = "npm run build" # ou "bun run build", como no seu log
+  publish = "dist"
+
+# Regra de redirecionamento para SPAs
+# Isso garante que todas as rotas sejam direcionadas para o index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
