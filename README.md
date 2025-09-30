@@ -1,6 +1,6 @@
 
 
-<h1 align="center">Sistema de Ponto de Venda (PDV) - Fluxo de Caixa</h1>
+<h1 align="center">Sistema de Ponto de Venda (PDV) - Fluxo de p Caixa</h1>
 
 <p align="center">
   Sistema PDV completo para gestão de vendas, produtos, clientes e fornecedores. Desenvolvido para ser rápido, intuitivo e acessível de qualquer lugar.
@@ -30,3 +30,4 @@
 | **Hospedagem** | `Netlify`                                                                                                |
 
 ---
+
