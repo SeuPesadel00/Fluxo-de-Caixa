@@ -3,7 +3,9 @@
 <h1 align="center">Sistema de Ponto de Venda (PDV) - Fluxo de Caixa</h1>
 
 <p align="center">
-  Sistema PDV completo para gestão de vendas, produtos, clientes e fornecedores. Desenvolvido para ser rápido, intuitivo e acessível de qualquer lugar.
+  Sistema PDV completo para gestão de vendas, produtos, clientes e fornecedores. Desenvolvido para ser rápido, intuitivo e acessível de qualquer lugar. 
+  
+  * [Visite o Site](https://fluxodecaixav1.netlify.app/login)
 </p>
 
 ---
@@ -30,5 +32,24 @@
 | **Hospedagem** | `Netlify`                                                                                                |
 
 ---
+
+## 👨‍💻 Autor
+
+Este projeto foi desenvolvido e configurado por: Arthur Henrique Gomes de Oliveira
+
+**Projetos:**
+
+* [Capital Daark](https://github.com/SeuPesadel00/CapitalDaark-new)
+* [Curriculo Interativo](https://github.com/SeuPesadel00/Curriculo-Interativo)
+* [Caramelo Real](https://github.com/SeuPesadel00/CarameloReal)
+* [Portifolio Sofia](https://github.com/SeuPesadel00/Portfolio-SofiaOliveira)
+
+**Contatos:**
+
+* [Meu curriculo](https://curriculo-interativo-arthur.vercel.app/)
+* [LinkedIn](https://www.linkedin.com/in/arthur-henriquee/)
+* [GitHub](https://github.com/SeuPesadel00)
+* [WhatsApp](https://wa.me/5561981076848)
+
 
 
