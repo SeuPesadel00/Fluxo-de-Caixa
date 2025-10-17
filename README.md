@@ -1,11 +1,9 @@
 
 
-<h1 align="center">Sistema de Ponto de Venda (PDV) - Fluxo de Caixa</h1>
+# [Sistema Fluxo de Caixa](https://fluxodecaixav1.netlify.app/login)</h1>
 
 <p align="center">
   Sistema PDV completo para gestão de vendas, produtos, clientes e fornecedores. Desenvolvido para ser rápido, intuitivo e acessível de qualquer lugar. 
-  
-  * [Visite o Site](https://fluxodecaixav1.netlify.app/login)
 </p>
 
 ---
@@ -50,6 +48,7 @@ Este projeto foi desenvolvido e configurado por: Arthur Henrique Gomes de Olivei
 * [LinkedIn](https://www.linkedin.com/in/arthur-henriquee/)
 * [GitHub](https://github.com/SeuPesadel00)
 * [WhatsApp](https://wa.me/5561981076848)
+
 
 
 
