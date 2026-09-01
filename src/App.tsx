@@ -3,8 +3,10 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { AppProvider, useAppContext } from "@/contexts/AppContext";
+import { AppProvider } from "@/contexts/AppContext";
+import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { Login } from "./pages/Login";
+import { Register } from "./pages/Register";
 import { Dashboard } from "./pages/Dashboard";
 import { Vendas } from "./pages/Vendas";
 import { Clientes } from "./pages/Clientes";
@@ -15,13 +17,15 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
-  const { isAuthenticated } = useAppContext();
-  return isAuthenticated ? <>{children}</> : <Navigate to="/login" replace />;
+  const { session, loading } = useAuth();
+  if (loading) return <div className="h-screen w-screen flex items-center justify-center bg-[#0a0a0c]"><p className="text-white">Carregando...</p></div>;
+  return session ? <>{children}</> : <Navigate to="/login" replace />;
 };
 
 const PublicRoute = ({ children }: { children: React.ReactNode }) => {
-  const { isAuthenticated } = useAppContext();
-  return !isAuthenticated ? <>{children}</> : <Navigate to="/" replace />;
+  const { session, loading } = useAuth();
+  if (loading) return <div className="h-screen w-screen flex items-center justify-center bg-[#0a0a0c]"><p className="text-white">Carregando...</p></div>;
+  return !session ? <>{children}</> : <Navigate to="/" replace />;
 };
 
 const AppRoutes = () => (
@@ -30,6 +34,11 @@ const AppRoutes = () => (
       <Route path="/login" element={
         <PublicRoute>
           <Login />
+        </PublicRoute>
+      } />
+      <Route path="/register" element={
+        <PublicRoute>
+          <Register />
         </PublicRoute>
       } />
       <Route path="/" element={
@@ -64,13 +73,15 @@ const AppRoutes = () => (
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <AppProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <AppRoutes />
-      </TooltipProvider>
-    </AppProvider>
+    <AuthProvider>
+      <AppProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <AppRoutes />
+        </TooltipProvider>
+      </AppProvider>
+    </AuthProvider>
   </QueryClientProvider>
 );
 

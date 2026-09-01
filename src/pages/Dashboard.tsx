@@ -1,5 +1,5 @@
 import { Navbar } from '@/components/Navbar';
-import { useAppContext } from '@/contexts/AppContext';
+import { useAuth } from '@/contexts/AuthContext';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { DollarSign, TrendingUp, TrendingDown, Wallet, Plus } from 'lucide-react';
 import { BarChart } from '@/components/BarChart';
@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { mockMonthlyPerformance } from '@/data/mockDashboardData';
 
 export const Dashboard = () => {
-  const { logout } = useAppContext();
+  const { signOut } = useAuth();
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('pt-BR', {
@@ -34,7 +34,7 @@ export const Dashboard = () => {
   return (
     <div className="min-h-screen bg-[#0a0a0c] bg-[url('https://images.unsplash.com/photo-1638202993928-7267aad84c31?q=80&w=2564&auto=format&fit=crop')] bg-cover bg-fixed bg-center">
       <div className="min-h-screen bg-black/80 backdrop-blur-md">
-        <Navbar onLogout={logout} />
+        <Navbar onLogout={signOut} />
         
         <main className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
